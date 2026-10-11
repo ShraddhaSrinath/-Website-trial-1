@@ -150,3 +150,104 @@ body {
     box-shadow: 0 14px 32px rgba(217, 83, 15, 0.22);
     border-color: #D9530F;
 }
+
+/* --- Quiz Form Styling --- */
+.quiz-form {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0 8px 24px rgba(217, 83, 15, 0.12);
+    border: 2px solid #FFE3D1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #1A1A1A;
+    font-size: 0.95rem;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 2px solid #E2E8F0;
+    font-family: inherit;
+    font-size: 0.95kr;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #D9530F;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 400 !important;
+    color: #2D2D2D;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    accent-color: #D9530F;
+    width: 18px;
+    height: 18px;
+}
+
+/* --- Submit Button --- */
+.submit-btn {
+    background: #D9530F;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #b5430c;
+    transform: translateY(-2px);
+}
+
+.back-link-container {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.back-link {
+    color: #1A1A1A;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: #D9530F;
+}
+
