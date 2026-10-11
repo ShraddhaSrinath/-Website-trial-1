@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quiz - How Well Do You Know Me?</title>
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
     <style>
         /* Circular Bubbles for Q4 */
         .bubble-options {
@@ -89,14 +88,20 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 18px rgba(242, 166, 90, 0.3);
         }
+
+        /* Back Pain White-to-Red Gradient Slider styling */
+        .pain-slider {
+            background: linear-gradient(to right, #ffffff, #ffb3b3, #ff4d4d, #cc0000);
+            accent-color: #8b0000;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header class="hero-header">
-            <h1>Shuru Madonva 😋</h1>
-            <p class="subtitle">Remeber full serious matter this is!.</p>
+            <h1>Question Time! 🧠</h1>
+            <p class="subtitle">Let's see if you actually listen when I talk.</p>
         </header>
 
         <form id="page3Form" class="quiz-form">
@@ -214,25 +219,21 @@
                     <label class="toggle-card-label">
                         <input type="radio" name="Q5_Taller_Item" value="Burj Khalifa" required>
                         <div class="toggle-card">
-                            <img src="
-
-http://googleusercontent.com/generated_image_content/0
-
-" alt="Burj Khalifa">
+                            <img src="watermarked_img_4557068340628294443.jpg" alt="Burj Khalifa">
                             <span>Burj Khalifa 🏙️</span>
                         </div>
                     </label>
                     <label class="toggle-card-label">
                         <input type="radio" name="Q5_Taller_Item" value="Lebron James">
                         <div class="toggle-card">
-                            <img src="[attachment_1](attachment)" alt="LeBron James">
+                            <img src="lebron.jpg" alt="LeBron James">
                             <span>Lebron James 🏀</span>
                         </div>
                     </label>
                     <label class="toggle-card-label">
                         <input type="radio" name="Q5_Taller_Item" value="Me (I'm so tall, I'm like the tallest in Thodesandipalya)">
                         <div class="toggle-card">
-                            <img src="[attachment_0](attachment)" alt="Me">
+                            <img src="me.jpg" alt="Me">
                             <span>Me (Tallest in Thodesandipalya 😎)</span>
                         </div>
                     </label>
@@ -276,6 +277,65 @@ http://googleusercontent.com/generated_image_content/0
                 </div>
             </div>
 
+            <!-- Question Card 8: Back Pain Slider -->
+            <div class="question-card">
+                <h2 class="question-title">8. How much Back Pain do I have on a daily basis?</h2>
+                <div class="sliders-list">
+                    <div class="slider-item">
+                        <span class="food-name" id="painDesc">Point 2) Extraordinary Back Pain</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q8_Back_Pain_Level" min="1" max="4" step="1" value="2" class="custom-slider pain-slider" oninput="updatePainLabel(this.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 9: Favourite Anime -->
+            <div class="question-card">
+                <h2 class="question-title">9. Which is my Favourite Anime?</h2>
+                <div class="options-group" style="flex-direction: column; align-items: stretch; gap: 10px;">
+                    <label class="custom-radio">
+                        <input type="radio" name="Q9_Favourite_Anime" value="JoJo's Bizarre Adventure (Option 1)" required>
+                        <span class="radio-box" style="text-align: left;">JoJo's Bizarre Adventure ⭐️</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q9_Favourite_Anime" value="JoJo's Bizarre Adventure (Option 2)">
+                        <span class="radio-box" style="text-align: left;">JoJo's Bizarre Adventure ⭐️</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q9_Favourite_Anime" value="JoJo's Bizarre Adventure (Option 3)">
+                        <span class="radio-box" style="text-align: left;">JoJo's Bizarre Adventure ⭐️</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q9_Favourite_Anime" value="JoJo's Bizarre Adventure (Option 4)">
+                        <span class="radio-box" style="text-align: left;">JoJo's Bizarre Adventure ⭐️</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question Card 10: Triple Integration Math Problem -->
+            <div class="question-card">
+                <h2 class="question-title">10. What is the exact value of this math equation?<br><br>$$\iiint_V (x^2 y + y^2 z + z^2 x) \,dx\,dy\,dz$$<br>where $V = [0,1] \times [0,1] \times [0,1]$?</h2>
+                <div class="options-group" style="flex-direction: column; align-items: stretch; gap: 10px;">
+                    <label class="custom-radio">
+                        <input type="radio" name="Q10_Math_Answer" value="1/4" required>
+                        <span class="radio-box" style="text-align: left;">$\frac{1}{4}$</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q10_Math_Answer" value="3/8">
+                        <span class="radio-box" style="text-align: left;">$\frac{3}{8}$</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q10_Math_Answer" value="1/2 (Correct)">
+                        <span class="radio-box" style="text-align: left;">$\frac{1}{2}$</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q10_Math_Answer" value="5/12">
+                        <span class="radio-box" style="text-align: left;">$\frac{5}{12}$</span>
+                    </label>
+                </div>
+            </div>
+
             <button type="submit" class="submit-btn" style="margin-top: 20px;">Next: Final Question ➔</button>
         </form>
 
@@ -292,10 +352,21 @@ http://googleusercontent.com/generated_image_content/0
     </div>
 
     <script>
+        // Dynamic label handler for Back Pain slider
+        function updatePainLabel(val) {
+            const labels = {
+                "1": "Point 1) Too much Back Pain",
+                "2": "Point 2) Extraordinary Back Pain",
+                "3": "Point 3) Spine is already in 100+ pieces",
+                "4": "Point 4) Spine has stopped existing in physical matter and has transformed into a fifth dimension entity"
+            };
+            document.getElementById('painDesc').textContent = labels[val];
+        }
+
         document.getElementById('page3Form').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Save all 7 questions into browser memory
+            // Save all 10 questions into browser memory
             localStorage.setItem('Q1_Actress_Preference', document.querySelector('input[name="Q1_Actress_Preference"]:checked').value);
             localStorage.setItem('Q2_Place_To_Visit', document.querySelector('input[name="Q2_Place_To_Visit"]:checked').value);
             localStorage.setItem('Q3_Dahi_Puri_Plates', document.querySelector('input[name="Q3_Dahi_Puri_Plates"]').value);
@@ -308,9 +379,8 @@ http://googleusercontent.com/generated_image_content/0
             localStorage.setItem('Q6_Underwater_Breathing_Hours', document.querySelector('input[name="Q6_Underwater_Breathing_Hours"]').value + ' Hours');
             localStorage.setItem('Q7_Love_Bengaluru_Reason', document.querySelector('input[name="Q7_Love_Bengaluru_Reason"]:checked').value);
 
-            // Forward smoothly to Page 4
-            window.location.href = 'page4.html';
-        });
-    </script>
-</body>
-</html>
+            const painValues = {
+                "1": "Point 1) Too much Back Pain",
+                "2": "Point 2) Extraordinary Back Pain",
+                "3": "Point 3) Spine is already in 100+ pieces",
+                "4": "P
