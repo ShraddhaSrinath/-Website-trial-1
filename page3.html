@@ -1,30 +1,109 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quiz - How Well Do You Know Me?</title>
-    <link rel="stylesheet" href="style.css?v=3">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Afacad+Flux:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=8">
+    <style>
+        /* Circular Bubbles for Q4 */
+        .bubble-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .bubble-label {
+            cursor: pointer;
+            text-align: center;
+        }
+        .bubble-label input[type="radio"] {
+            display: none;
+        }
+        .bubble-box {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: #fff;
+            border: 3px solid #f2a65a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .bubble-label input[type="radio"]:checked + .bubble-box {
+            background: #f2a65a;
+            color: #fff;
+            transform: scale(1.08);
+            box-shadow: 0 6px 15px rgba(242, 166, 90, 0.4);
+        }
+
+        /* 3 Cards Toggle for Q5 */
+        .cards-toggle-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .toggle-card-label {
+            cursor: pointer;
+            flex: 1;
+            min-width: 120px;
+            max-width: 180px;
+        }
+        .toggle-card-label input[type="radio"] {
+            display: none;
+        }
+        .toggle-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 12px;
+            text-align: center;
+            border: 3px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .toggle-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+        .toggle-card span {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            color: #333;
+        }
+        .toggle-card-label input[type="radio"]:checked + .toggle-card {
+            border-color: #f2a65a;
+            background-color: #fff7f0;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 18px rgba(242, 166, 90, 0.3);
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
         <header class="hero-header">
-            <h1>Question Time! 🧠</h1>
-            <p class="subtitle">Shuru Madonva ? 😋.</p>
+            <h1>Shuru Madonva 😋</h1>
+            <p class="subtitle">Remeber full serious matter this is!.</p>
         </header>
 
-        <form action="https://formsubmit.co/
-shamith2026@gmail.com" method="POST" class="quiz-form">
-            <input type="hidden" name="_captcha" value="false">
-
+        <form id="page3Form" class="quiz-form">
+            
             <!-- Question Card 1 -->
             <div class="question-card">
                 <h2 class="question-title">1. Which of these two actresses do I prefer when it comes to looks?</h2>
-                
                 <div class="vs-container">
                     <div class="vs-card">
                         <img src="Alia.jpg" alt="Alia Bhatt" class="actress-img">
@@ -36,7 +115,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                         <span class="actor-label">Tamannah Bhatia</span>
                     </div>
                 </div>
-
                 <div class="options-group">
                     <label class="custom-radio">
                         <input type="radio" name="Q1_Actress_Preference" value="Alia Bhatt" required>
@@ -52,7 +130,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
             <!-- Question Card 2 -->
             <div class="question-card">
                 <h2 class="question-title">2. Which of these places would I love to visit?</h2>
-                
                 <div class="vs-container">
                     <div class="vs-card">
                         <img src="himalaya.jpg" alt="Himalayan Range" class="actress-img">
@@ -64,7 +141,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                         <span class="actor-label">Pakistan</span>
                     </div>
                 </div>
-
                 <div class="options-group">
                     <label class="custom-radio">
                         <input type="radio" name="Q2_Place_To_Visit" value="Himalayan Range" required>
@@ -79,10 +155,8 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
 
             <!-- Question Card 3 -->
             <div class="question-card">
-                <h2 class="question-title">3. How many plates of each of these foods can I belt when I'm seriously hungry and feel the need for stress eating?</h2>
-                
+                <h2 class="question-title">3. How many plates of each of these foods can I belt when I'm seriously hungry?</h2>
                 <div class="sliders-list">
-                    <!-- Food Item 1 -->
                     <div class="slider-item">
                         <span class="food-name">Dahi Puri 🥣</span>
                         <div class="slider-row">
@@ -90,8 +164,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                             <div class="value-box" id="out1">2.5</div>
                         </div>
                     </div>
-
-                    <!-- Food Item 2 -->
                     <div class="slider-item">
                         <span class="food-name">Biryani 🍲</span>
                         <div class="slider-row">
@@ -99,8 +171,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                             <div class="value-box" id="out2">2.5</div>
                         </div>
                     </div>
-
-                    <!-- Food Item 3 -->
                     <div class="slider-item">
                         <span class="food-name">Lunch Box of random people 🍱</span>
                         <div class="slider-row">
@@ -108,8 +178,6 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                             <div class="value-box" id="out3">2.5</div>
                         </div>
                     </div>
-
-                    <!-- Food Item 4 -->
                     <div class="slider-item">
                         <span class="food-name">Happy Happy Biscuits 🍪</span>
                         <div class="slider-row">
@@ -120,15 +188,102 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
                 </div>
             </div>
 
-            <button type="submit" class="submit-btn">Finish & Submit Quiz 🎉</button>
+            <!-- Question Card 4: Sadness Habits (Circular Bubbles) -->
+            <div class="question-card">
+                <h2 class="question-title">4. Things I would do when I am sad:</h2>
+                <div class="bubble-options">
+                    <label class="bubble-label">
+                        <input type="radio" name="Q4_Sadness_Habit" value="Listen to Sad Songs to maintain the sadness" required>
+                        <div class="bubble-box">Listen to Sad Songs to maintain the sadness 🎧</div>
+                    </label>
+                    <label class="bubble-label">
+                        <input type="radio" name="Q4_Sadness_Habit" value="Write Random stuff to make myself feel better">
+                        <div class="bubble-box">Write Random stuff to make myself feel better ✍️</div>
+                    </label>
+                    <label class="bubble-label">
+                        <input type="radio" name="Q4_Sadness_Habit" value="Walking till I feel a strong ache in my legs">
+                        <div class="bubble-box">Walking till I feel a strong ache in my legs 🚶‍♂️</div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question Card 5: Which is taller (Interactive Toggle Cards) -->
+            <div class="question-card">
+                <h2 class="question-title">5. Which one of the following is taller?</h2>
+                <div class="cards-toggle-container">
+                    <label class="toggle-card-label">
+                        <input type="radio" name="Q5_Taller_Item" value="Burj Khalifa" required>
+                        <div class="toggle-card">
+                            <img src="
+
+http://googleusercontent.com/generated_image_content/0
+
+" alt="Burj Khalifa">
+                            <span>Burj Khalifa 🏙️</span>
+                        </div>
+                    </label>
+                    <label class="toggle-card-label">
+                        <input type="radio" name="Q5_Taller_Item" value="Lebron James">
+                        <div class="toggle-card">
+                            <img src="[attachment_1](attachment)" alt="LeBron James">
+                            <span>Lebron James 🏀</span>
+                        </div>
+                    </label>
+                    <label class="toggle-card-label">
+                        <input type="radio" name="Q5_Taller_Item" value="Me (I'm so tall, I'm like the tallest in Thodesandipalya)">
+                        <div class="toggle-card">
+                            <img src="[attachment_0](attachment)" alt="Me">
+                            <span>Me (Tallest in Thodesandipalya 😎)</span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question Card 6: Underwater Breathing Slider -->
+            <div class="question-card">
+                <h2 class="question-title">6. How long can I breathe under water?</h2>
+                <div class="sliders-list">
+                    <div class="slider-item">
+                        <span class="food-name">Time duration:</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q6_Underwater_Breathing_Hours" min="17" max="25" step="1" value="21" class="custom-slider" oninput="document.getElementById('outHours').textContent = this.value + ' Hours'">
+                            <div class="value-box" id="outHours" style="min-width: 90px;">21 Hours</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 7: Why I Love Bengaluru -->
+            <div class="question-card">
+                <h2 class="question-title">7. Why do I love Bengaluru?</h2>
+                <div class="options-group" style="flex-direction: column; align-items: stretch; gap: 10px;">
+                    <label class="custom-radio">
+                        <input type="radio" name="Q7_Love_Bengaluru_Reason" value="Bengaluru is Goated" required>
+                        <span class="radio-box" style="text-align: left;">Bengaluru is Goated 🐐</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q7_Love_Bengaluru_Reason" value="Bengaluru is City of smart people">
+                        <span class="radio-box" style="text-align: left;">Bengaluru is City of smart people 🧠</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q7_Love_Bengaluru_Reason" value="Bengaluru is nkn crazy crazy">
+                        <span class="radio-box" style="text-align: left;">Bengaluru is nkn crazy crazy 🔥</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q7_Love_Bengaluru_Reason" value="Ladies get to have free bus transportation (this option only bro, i swear, naane helta idini, only reason I like this place bro)">
+                        <span class="radio-box" style="text-align: left;">Ladies get to have free bus transportation (this option only bro, i swear, naane helta idini, only reason I like this place bro) 🚌</span>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn" style="margin-top: 20px;">Next: Final Question ➔</button>
         </form>
 
         <div class="back-link-container">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
+            <a href="page1.html" class="back-link">&larr; Back</a>
         </div>
     </div>
 
-    <!-- Floating Geometric Doodles Footer -->
     <div class="doodle-footer-container">
         <div class="doodle-shape triangle"></div>
         <div class="doodle-shape box"></div>
@@ -136,7 +291,26 @@ shamith2026@gmail.com" method="POST" class="quiz-form">
         <div class="doodle-shape box-small"></div>
     </div>
 
+    <script>
+        document.getElementById('page3Form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Save all 7 questions into browser memory
+            localStorage.setItem('Q1_Actress_Preference', document.querySelector('input[name="Q1_Actress_Preference"]:checked').value);
+            localStorage.setItem('Q2_Place_To_Visit', document.querySelector('input[name="Q2_Place_To_Visit"]:checked').value);
+            localStorage.setItem('Q3_Dahi_Puri_Plates', document.querySelector('input[name="Q3_Dahi_Puri_Plates"]').value);
+            localStorage.setItem('Q3_Biryani_Plates', document.querySelector('input[name="Q3_Biryani_Plates"]').value);
+            localStorage.setItem('Q3_Lunchbox_Plates', document.querySelector('input[name="Q3_Lunchbox_Plates"]').value);
+            localStorage.setItem('Q3_HappyHappy_Plates', document.querySelector('input[name="Q3_HappyHappy_Plates"]').value);
+            
+            localStorage.setItem('Q4_Sadness_Habit', document.querySelector('input[name="Q4_Sadness_Habit"]:checked').value);
+            localStorage.setItem('Q5_Taller_Item', document.querySelector('input[name="Q5_Taller_Item"]:checked').value);
+            localStorage.setItem('Q6_Underwater_Breathing_Hours', document.querySelector('input[name="Q6_Underwater_Breathing_Hours"]').value + ' Hours');
+            localStorage.setItem('Q7_Love_Bengaluru_Reason', document.querySelector('input[name="Q7_Love_Bengaluru_Reason"]:checked').value);
+
+            // Forward smoothly to Page 4
+            window.location.href = 'page4.html';
+        });
+    </script>
 </body>
 </html>
-
-
