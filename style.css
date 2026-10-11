@@ -402,3 +402,23 @@ body {
     0% { transform: translateY(0px) rotate(0deg); }
     100% { transform: translateY(-8px) rotate(10deg); }
 }
+
+/* --- Text Input Fields styled like cards --- */
+.text-input-card {
+    width: 100%;
+    background: #FFFFFF;
+    border: 2px solid #FFE3D1;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #4A3022;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.text-input-card:focus {
+    border-color: #D9530F;
+    box-shadow: 0 4px 12px rgba(217, 83, 15, 0.15);
+}
+
