@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Know About Me</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
     <div class="container">
         <header class="hero-header">
-            <h1>Oh Neeva Banni Banni (broski who are you?) 👀</h1>
-            <p class="Hey, this is genuinely not a joke, these are basic stuff about me and if you get these wrong andre ashte consider us strangers".</p>
+            <h1>Oh Neeva Banni Banni (Genuinely who are you?)</h1>
+            <p class="subtitle">This is not a joke, if you can't get these basic questions about me right then ashte consider us strangers.</p>
         </header>
 
         <!-- Quiz Form enclosed in a Light Orange Card -->
-        <form action="https://formsubmit.com/shamith2026@gmail.com" method="POST" class="quiz-form question-card">
+        <form id="page1Form" class="quiz-form question-card">
             
-            <input type="hidden" name="_captcha" value="false">
-            <!-- Redirects straight to page 3 -->
-            <input type="hidden" name="_next" value="https://shraddhasrinath.github.io/-Website-trial-1/page3.html">
-
             <!-- Question Card Header / Instructions -->
             <h2 class="question-title">Player Identification 📝</h2>
 
@@ -66,5 +62,13 @@
         <div class="doodle-shape triangle-small"></div>
         <div class="doodle-shape box-small"></div>
     </div>
+
+    <!-- Smooth Navigation Script -->
+    <script>
+        document.getElementById('page1Form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'page3.html';
+        });
+    </script>
 </body>
 </html>
