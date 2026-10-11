@@ -1,6 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiz - How Well Do You Know Me?</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- --- ACCESS GUARD: Blocks direct entry --- -->
+    <script>
+        if (sessionStorage.getItem('quizStarted') !== 'true') {
+            // Redirect back to page 1 if they didn't fill it out
+            window.location.href = 'page1.html';
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <header class="hero-header">
+            <h1>Question Time! 🧠</h1>
+            <p class="subtitle">Let's see if you actually listen when I talk.</p>
+        </header>
+
+        <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST" class="quiz-form">
+            
+            <input type="hidden" name="_captcha" value="false">
+
+            <!-- Question 1 -->
+            <div class="form-group">
+                <label>1. What is my absolute favorite football club? ⚽</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="q1" value="Real Madrid" required> Real Madrid</label>
+                    <label class="radio-label"><input type="radio" name="q1" value="Inter Milan"> Inter Milan</label>
+                    <label class="radio-label"><input type="radio" name="q1" value="Barcelona"> Barcelona</label>
+                    <label class="radio-label"><input type="radio" name="q1" value="Manchester United"> Manchester United</label>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="form-group">
+                <label>2. What kind of aesthetic or style do I love most? ✨</label>
+                <div class="radio-group">
+                    <label class="radio-label"><input type="radio" name="q2" value="Minimalist" required> Minimalist chic</label>
+                    <label class="radio-label"><input type="radio" name="q2" value="Vibrant Orange"> Bold & Orange-themed</label>
+                    <label class="radio-label"><input type="radio" name="q2" value="Dark Moody"> Dark & moody</label>
+                    <label class="radio-label"><input type="radio" name="q2" value="Vintage"> Vintage retro</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Finish & Submit Quiz 🎉</button>
+        </form>
+
+        <div class="back-link-container">
+            <a href="index.html" class="back-link">&larr; Back to Home</a>
+        </div>
+    </div>
+
+</body>
+</html>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quiz - How Well Do You Know Me?</title>
