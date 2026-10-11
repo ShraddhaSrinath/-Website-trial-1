@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Know About Me</title>
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
 
@@ -14,8 +14,8 @@
             <p class="subtitle">This is not a joke, if you can't get these basic questions about me right then ashte consider us strangers.</p>
         </header>
 
-        <!-- Quiz Form enclosed in a Light Orange Card -->
-        <form id="page1Form" class="quiz-form question-card">
+        <!-- Quiz Form set to direct action -->
+        <form id="page1Form" action="page3.html" method="GET" class="quiz-form question-card">
             
             <!-- Question Card Header / Instructions -->
             <h2 class="question-title">Player Identification 📝</h2>
@@ -62,13 +62,5 @@
         <div class="doodle-shape triangle-small"></div>
         <div class="doodle-shape box-small"></div>
     </div>
-
-    <!-- Smooth Navigation Script -->
-    <script>
-        document.getElementById('page1Form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            window.location.href = 'page3.html';
-        });
-    </script>
 </body>
 </html>
