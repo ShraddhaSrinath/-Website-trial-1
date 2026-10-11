@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Know About Me</title>
-    <!-- IMPORTANT: This links your orange card styles to page 1 -->
     <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
     <div class="container">
         <header class="hero-header">
-            <h1>Barii sirr Barii madam  👀</h1>
+            <h1>Ohh neeva banni banni (broski who are you?) 👀</h1>
             <p class="subtitle">NOTICE: this is not something just for fun, so if you mess up basic stuff about me consider we are strangers!!.</p>
         </header>
 
@@ -19,7 +18,7 @@
         <form action="https://formsubmit.co/shamith2026@gmail.com" method="POST" class="quiz-form">
             
             <input type="hidden" name="_captcha" value="false">
-            <!-- Redirects to page 2 right after submitting -->
+            <!-- Redirects straight to page 2 -->
             <input type="hidden" name="_next" value="https://shraddhasrinath.github.io/-Website-trial-1/page2.html">
 
             <!-- Question 1: Name -->
@@ -55,20 +54,12 @@
         </div>
     </div>
 
-    <!-- Secure Token Script -->
-    <script>
-        document.querySelector('.quiz-form').addEventListener('submit', function() {
-            sessionStorage.setItem('quizStarted', 'true');
-        });
-    </script>
-
-<!-- --- Floating Geometric Doodles Footer --- -->
-<div class="doodle-footer-container">
-    <div class="doodle-shape triangle"></div>
-    <div class="doodle-shape box"></div>
-    <div class="doodle-shape triangle-small"></div>
-    <div class="doodle-shape box-small"></div>
-</div>
-
+    <!-- Floating Geometric Doodles Footer -->
+    <div class="doodle-footer-container">
+        <div class="doodle-shape triangle"></div>
+        <div class="doodle-shape box"></div>
+        <div class="doodle-shape triangle-small"></div>
+        <div class="doodle-shape box-small"></div>
+    </div>
 </body>
 </html>
