@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz - Know About Me</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
     <div class="container">
         <header class="hero-header">
-            <h1>Ohh Neeva Banni Banni (broski who are you?) 👀</h1>
-            <p class="subtitle">NOTICE: this is not something just for fun, so if you mess up basic stuff about me consider we are strangers!!.</p>
+            <h1>Oh Neeva Banni Banni (broski who are you?) 👀</h1>
+            <p class="Hey, this is genuinely not a joke, these are basic stuff about me and if you get these wrong andre ashte consider us strangers".</p>
         </header>
 
-        <!-- Quiz Form -->
-        <form action="https://formsubmit.co/shamith2026@gmail.com" method="POST" class="quiz-form">
+        <!-- Quiz Form enclosed in a Light Orange Card -->
+        <form action="https://formsubmit.com/shamith2026@gmail.com" method="POST" class="quiz-form question-card">
             
             <input type="hidden" name="_captcha" value="false">
-            <!-- Redirects straight to page 2 -->
+            <!-- Redirects straight to page 3 -->
             <input type="hidden" name="_next" value="https://shraddhasrinath.github.io/-Website-trial-1/page3.html">
 
+            <!-- Question Card Header / Instructions -->
+            <h2 class="question-title">Player Identification 📝</h2>
+
             <!-- Question 1: Name -->
-            <div class="form-group">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="Name" placeholder="Enter your full name..." required>
+            <div class="form-group" style="margin-bottom: 18px;">
+                <label for="name" class="food-name">Your Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Enter your full name..." class="text-input-card" required>
             </div>
 
             <!-- Question 2: Meeting Place -->
-            <div class="form-group">
-                <label for="meeting">Where did I first meet you?</label>
-                <input type="text" id="meeting" name="Meeting_Place" placeholder="Be honest..." required>
+            <div class="form-group" style="margin-bottom: 18px;">
+                <label for="meeting" class="food-name">Where did I first meet you?</label>
+                <input type="text" id="meeting" name="Meeting_Place" placeholder="Be honest..." class="text-input-card" required>
             </div>
 
             <!-- Question 3: Height -->
-            <div class="form-group">
-                <label>Height comparison:</label>
-                <div class="radio-group">
-                    <label class="radio-label">
-                        <input type="radio" name="Height" value="Shorter than me" required> Shorter than me 
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label class="food-name">Height comparison:</label>
+                <div class="options-group">
+                    <label class="custom-radio">
+                        <input type="radio" name="Height" value="Shorter than me" required>
+                        <span class="radio-box">Shorter than me 📉</span>
                     </label>
-                    <label class="radio-label">
-                        <input type="radio" name="Height" value="Taller than me"> Taller than me 
+                    <label class="custom-radio">
+                        <input type="radio" name="Height" value="Taller than me">
+                        <span class="radio-box">Taller than me 📈</span>
                     </label>
                 </div>
             </div>
