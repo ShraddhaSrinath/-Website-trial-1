@@ -1,49 +1,63 @@
-<!-- Inside page1.html -->
-<form action="https://formsubmit.co/shamith2026@gmail.com" method="POST" class="quiz-form">
-    
-    <input type="hidden" name="_captcha" value="false">
-    <!-- Redirect user to page2.html right after they submit their info -->
-    <input type="hidden" name="_next" value="https://shraddhasrinath.github.io/-Website-trial-1/page2.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Know About Me</title>
+    <!-- IMPORTANT: This links your orange card styles to page 1 -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
 
-    <!-- Question 1: Name -->
-    <div class="form-group">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="Name" placeholder="Enter your full name..." required>
-    </div>
+    <div class="container">
+        <header class="hero-header">
+            <h1>Let's See What You Know! 👀</h1>
+            <p class="subtitle">Fill out your details below before taking the challenge.</p>
+        </header>
 
-    <!-- Question 2: Meeting Place -->
-    <div class="form-group">
-        <label for="meeting">Where did I first meet you?</label>
-        <input type="text" id="meeting" name="Meeting_Place" placeholder="Be honest..." required>
-    </div>
+        <!-- Quiz Form -->
+        <form action="https://formsubmit.co/shamith2026@gmail.com" method="POST" class="quiz-form">
+            
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Redirects to page 2 right after submitting -->
+            <input type="hidden" name="_next" value="https://shraddhasrinath.github.io/-Website-trial-1/page2.html">
 
-    <!-- Question 3: Height -->
-    <div class="form-group">
-        <label>Height comparison:</label>
-        <div class="radio-group">
-            <label class="radio-label">
-                <input type="radio" name="Height" value="Shorter than me" required> Shorter than me 📉
-            </label>
-            <label class="radio-label">
-                <input type="radio" name="Height" value="Taller than me"> Taller than me 📈
-            </label>
-        </div>
-    </div>
+            <!-- Question 1: Name -->
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Enter your full name..." required>
+            </div>
 
-    <!-- Updated Button -->
-    <button type="submit" class="submit-btn">Start ➔</button>
-</form>
+            <!-- Question 2: Meeting Place -->
+            <div class="form-group">
+                <label for="meeting">Where did I first meet you?</label>
+                <input type="text" id="meeting" name="Meeting_Place" placeholder="Be honest..." required>
+            </div>
 
+            <!-- Question 3: Height -->
+            <div class="form-group">
+                <label>Height comparison:</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="Height" value="Shorter than me" required> Shorter than me 📉
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="Height" value="Taller than me"> Taller than me 📈
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Start ➔</button>
+        </form>
 
         <div class="back-link-container">
             <a href="index.html" class="back-link">&larr; Back to Home</a>
         </div>
     </div>
 
-    <!-- --- SECURE TOKEN SCRIPT --- -->
+    <!-- Secure Token Script -->
     <script>
         document.querySelector('.quiz-form').addEventListener('submit', function() {
-            // Grants permission to view page 2
             sessionStorage.setItem('quizStarted', 'true');
         });
     </script>
