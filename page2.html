@@ -1,71 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quiz - How Well Do You Know Me?</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- --- ACCESS GUARD: Blocks direct entry --- -->
-    <script>
-        if (sessionStorage.getItem('quizStarted') !== 'true') {
-            // Redirect back to page 1 if they didn't fill it out
-            window.location.href = 'page1.html';
-        }
-    </script>
-</head>
-<body>
-
-    <div class="container">
-        <header class="hero-header">
-            <h1>Question Time! 🧠</h1>
-            <p class="subtitle">Let's see if you actually listen when I talk.</p>
-        </header>
-
-        <form action="https://formsubmit.co/shamith2026@gmail.com.com" method="POST" class="quiz-form">
-            
-            <input type="hidden" name="_captcha" value="false">
-
-            <!-- Question 1 -->
-            <div class="form-group">
-                <label>1. What is my absolute favorite football club? ⚽</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="q1" value="Real Madrid" required> Real Madrid</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Inter Milan"> Inter Milan</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Barcelona"> Barcelona</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Manchester United"> Manchester United</label>
-                </div>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="form-group">
-                <label>2. What kind of aesthetic or style do I love most? ✨</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="q2" value="Minimalist" required> Minimalist chic</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Vibrant Orange"> Bold & Orange-themed</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Dark Moody"> Dark & moody</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Vintage"> Vintage retro</label>
-                </div>
-            </div>
-
-            <button type="submit" class="submit-btn">Finish & Submit Quiz 🎉</button>
-        </form>
-
-        <div class="back-link-container">
-            <a href="index.html" class="back-link">&larr; Back to Home</a>
-        </div>
-    </div>
-
-</body>
-</html>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Quiz - How Well Do You Know Me?</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Afacad+Flux:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -76,28 +18,104 @@
         </header>
 
         <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST" class="quiz-form">
-            
             <input type="hidden" name="_captcha" value="false">
 
-            <!-- Question 1 -->
-            <div class="form-group">
-                <label>1. What is my absolute favorite football club? ⚽</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="q1" value="Real Madrid" required> Real Madrid</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Inter Milan"> Inter Milan</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Barcelona"> Barcelona</label>
-                    <label class="radio-label"><input type="radio" name="q1" value="Manchester United"> Manchester United</label>
+            <!-- Question Card 1 -->
+            <div class="question-card">
+                <h2 class="question-title">1. Which of these two actresses do I prefer when it comes to looks?</h2>
+                
+                <div class="vs-container">
+                    <div class="vs-card">
+                        <img src="[attachment_2](attachment)" alt="Alia Bhatt" class="actress-img">
+                        <span class="actor-label">Alia Bhatt</span>
+                    </div>
+                    <div class="vs-badge">VS</div>
+                    <div class="vs-card">
+                        <img src="[attachment_0](attachment)" alt="Tamannah Bhatia" class="actress-img">
+                        <span class="actor-label">Tamannah Bhatia</span>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <label class="custom-radio">
+                        <input type="radio" name="Q1_Actress_Preference" value="Alia Bhatt" required>
+                        <span class="radio-box">Alia Bhatt</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q1_Actress_Preference" value="Tamannah Bhatia">
+                        <span class="radio-box">Tamannah Bhatia</span>
+                    </label>
                 </div>
             </div>
 
-            <!-- Question 2 (You can copy/paste this block to add more questions) -->
-            <div class="form-group">
-                <label>2. What kind of aesthetic or style do I love most? ✨</label>
-                <div class="radio-group">
-                    <label class="radio-label"><input type="radio" name="q2" value="Minimalist" required> Minimalist chic</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Vibrant Orange"> Bold & Orange-themed</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Dark Moody"> Dark & moody</label>
-                    <label class="radio-label"><input type="radio" name="q2" value="Vintage"> Vintage retro</label>
+            <!-- Question Card 2 -->
+            <div class="question-card">
+                <h2 class="question-title">2. Which of these places would I love to visit?</h2>
+                
+                <div class="vs-container">
+                    <div class="vs-card">
+                        <img src="[attachment_1](attachment)" alt="Himalayan Range" class="actress-img">
+                        <span class="actor-label">Himalayan Range</span>
+                    </div>
+                    <div class="vs-badge">VS</div>
+                    <div class="vs-card">
+                        <img src="[attachment_3](attachment)" alt="Pakistan" class="actress-img">
+                        <span class="actor-label">Pakistan</span>
+                    </div>
+                </div>
+
+                <div class="options-group">
+                    <label class="custom-radio">
+                        <input type="radio" name="Q2_Place_To_Visit" value="Himalayan Range" required>
+                        <span class="radio-box">Himalayan Range 🏔️</span>
+                    </label>
+                    <label class="custom-radio">
+                        <input type="radio" name="Q2_Place_To_Visit" value="Pakistan">
+                        <span class="radio-box">Pakistan 🇵🇰</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question Card 3 -->
+            <div class="question-card">
+                <h2 class="question-title">3. How many plates of each of these foods can I belt when I'm seriously hungry and feel the need for stress eating?</h2>
+                
+                <div class="sliders-list">
+                    <!-- Food Item 1 -->
+                    <div class="slider-item">
+                        <span class="food-name">Dahi Puri 🥣</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q3_Dahi_Puri_Plates" min="1" max="5" step="0.5" value="2.5" class="custom-slider" oninput="document.getElementById('out1').textContent = this.value">
+                            <div class="value-box" id="out1">2.5</div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 2 -->
+                    <div class="slider-item">
+                        <span class="food-name">Biryani 🍲</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q3_Biryani_Plates" min="1" max="5" step="0.5" value="2.5" class="custom-slider" oninput="document.getElementById('out2').textContent = this.value">
+                            <div class="value-box" id="out2">2.5</div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 3 -->
+                    <div class="slider-item">
+                        <span class="food-name">Lunch Box of random people 🍱</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q3_Lunchbox_Plates" min="1" max="5" step="0.5" value="2.5" class="custom-slider" oninput="document.getElementById('out3').textContent = this.value">
+                            <div class="value-box" id="out3">2.5</div>
+                        </div>
+                    </div>
+
+                    <!-- Food Item 4 -->
+                    <div class="slider-item">
+                        <span class="food-name">Happy Happy Biscuits 🍪</span>
+                        <div class="slider-row">
+                            <input type="range" name="Q3_HappyHappy_Plates" min="1" max="5" step="0.5" value="2.5" class="custom-slider" oninput="document.getElementById('out4').textContent = this.value">
+                            <div class="value-box" id="out4">2.5</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -109,5 +127,15 @@
         </div>
     </div>
 
+    <!-- Floating Geometric Doodles Footer -->
+    <div class="doodle-footer-container">
+        <div class="doodle-shape triangle"></div>
+        <div class="doodle-shape box"></div>
+        <div class="doodle-shape triangle-small"></div>
+        <div class="doodle-shape box-small"></div>
+    </div>
+
 </body>
 </html>
+
+
